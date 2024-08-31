@@ -4,7 +4,7 @@ calificacion3 = float(input("Ingrese la tercera calificación: "))
 
 promedio = (calificacion1 + calificacion2 + calificacion3) / 3
 
-if promedio >= 5:
+if promedio >= 3:
     print("Aprobaste con un promedio de:", promedio)
 else:
     print("Reprobaste con un promedio de:", promedio)
