@@ -1,30 +1,38 @@
-def menu_destinos():
+def menu_destinos():  # Se define función para desplegar el menú.
     print("Seleccione lugar de destino: ")
     print("1. Estados Unidos ")
     print("2. Canadá ")
     print("3. Europa ")
     print("4. Resto del Mundo ")
 
-menu_destinos()
+
+menu_destinos()  # Se llama a la funcion del menú.
 
 OpcionDestinos = input("Ingrese el número correspondiente al lugar de destino: ")
+# Se definen las variables a ingresar.
 CantidadMinutos = float(input("Ingrese duración en minutos: "))
-DESCUENTO = 0.20
+DESCUENTO = 0.20  # Se define la constante.
 
-def estadosunidos(minutos):
+
+def estadosunidos(minutos):  # Para cada opción se define una función.
     return 900 * minutos
 
-def canada(minutos):
+
+def canada(minutos):  # El argumento "minutos" se enlaza con "CantidadMinutos" en la llamada de "CostoTotal".
     return 800 * minutos
+
 
 def europa(minutos):
     return 950 * minutos
 
+
 def resto_del_mundo(minutos):
     return 1250 * minutos
 
-def aplicar_descuento(costo_total):
-    return costo_total * (1 - DESCUENTO)
+
+def aplicar_descuento(costototal):
+    return costototal * (1 - DESCUENTO)  # "costototal"
+
 
 if OpcionDestinos == "1":
     print("Has seleccionado Estados Unidos")
