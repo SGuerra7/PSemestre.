@@ -1,7 +1,7 @@
 
 listanumeros = []
 
-def suma_pares(lista):
+def suma_pares():
     suma = 0
     while True:
         try:
@@ -16,5 +16,5 @@ def suma_pares(lista):
             suma += numero
     return suma
 
-resultado = suma_pares(listanumeros)
+resultado = suma_pares()
 print(f'La suma de los números pares es: {resultado}')

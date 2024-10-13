@@ -1,5 +1,5 @@
 def invertir_lista(lista):
-    return lista[::-1]
+    return lista[::-1] # "[::-1] Es una función predefinida en python, nos permite invertir la lista."
 
 
 lista_original = [1, 2, 3, 4, 5]
