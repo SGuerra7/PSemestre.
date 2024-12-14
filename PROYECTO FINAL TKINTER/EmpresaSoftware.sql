@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 14-12-2024 a las 13:57:43
+-- Tiempo de generación: 14-12-2024 a las 14:51:39
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -42,8 +42,7 @@ INSERT INTO `Clientes` (`ClienteID`, `Nombre`, `FechaRegistro`, `Estado`) VALUES
 (1, 'Juan Pérez', '2024-12-13', 'Activo'),
 (2, 'María López', '2024-12-13', 'Activo'),
 (3, 'Carlos Gómez', '2024-12-13', 'Inactivo'),
-(6, 's', '2024-12-13', 'Activo'),
-(7, 'Ramó Valdez', '2024-12-14', 'Activo');
+(8, 'Ramón Valdéz', '2024-12-14', 'Activo');
 
 --
 -- Disparadores `Clientes`
@@ -118,8 +117,7 @@ INSERT INTO `Contactos` (`ContactoID`, `ClienteID`, `Email`, `Telefono`, `Direcc
 (1, 1, 'juan.perez@email.com', '555-1234', 'Av. Principal 123'),
 (2, 2, 'maria.lopez@email.com', '555-5678', 'Calle Secundaria 456'),
 (3, 3, 'carlos.gomez@email.com', '555-9012', 'Plaza Central 789'),
-(6, 6, '', '', ''),
-(7, 7, 'donramonv@gmail.com', '3332555554', 'Tijuana, México.');
+(8, 8, 'soydonramon@gmail.com', '111111111', 'Ciudad de México');
 
 -- --------------------------------------------------------
 
@@ -141,7 +139,8 @@ CREATE TABLE `Preferencias` (
 INSERT INTO `Preferencias` (`PreferenciaID`, `ClienteID`, `Categoria`, `Valor`) VALUES
 (1, 1, 'Interés', 'Contabilidad'),
 (2, 2, 'Interés', 'Gestión de clientes'),
-(3, 3, 'Interés', 'Analítica de datos');
+(3, 3, 'Interés', 'Analítica de datos'),
+(6, 8, 'Importante', 'Gestión Atención');
 
 --
 -- Índices para tablas volcadas
@@ -172,7 +171,7 @@ ALTER TABLE `Contactos`
 --
 ALTER TABLE `Preferencias`
   ADD PRIMARY KEY (`PreferenciaID`),
-  ADD KEY `ClienteID` (`ClienteID`);
+  ADD UNIQUE KEY `ClienteID` (`ClienteID`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -182,7 +181,7 @@ ALTER TABLE `Preferencias`
 -- AUTO_INCREMENT de la tabla `Clientes`
 --
 ALTER TABLE `Clientes`
-  MODIFY `ClienteID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ClienteID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `Compras`
@@ -194,13 +193,13 @@ ALTER TABLE `Compras`
 -- AUTO_INCREMENT de la tabla `Contactos`
 --
 ALTER TABLE `Contactos`
-  MODIFY `ContactoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ContactoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `Preferencias`
 --
 ALTER TABLE `Preferencias`
-  MODIFY `PreferenciaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `PreferenciaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas
