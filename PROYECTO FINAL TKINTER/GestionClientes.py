@@ -1,5 +1,4 @@
 from random import uniform
-
 import mysql.connector
 from tkinter import Tk, ttk, messagebox, StringVar, Entry, Text, Scrollbar, VERTICAL, END
 from tabulate import tabulate
@@ -165,6 +164,7 @@ class Application:
     def update_client(self):
         try:
             cliente_id = int(self.cliente_id_var.get())
+            nombre = self.nombre_var.get()
             email = self.email_var.get()
             telefono = self.telefono_var.get()
             direccion = self.direccion_var.get()
@@ -172,7 +172,7 @@ class Application:
             valor = self.valor_var.get()
 
             self.db.execute_procedure(
-                "ActualizarPreferenciasYContacto", (cliente_id, email, telefono, direccion, categoria, valor)
+                "ActualizarPreferenciasYContacto", (cliente_id, nombre, email, telefono, direccion, categoria, valor)
             )
             messagebox.showinfo("Éxito", "Datos del cliente actualizados correctamente.")
             self.clear_fields()

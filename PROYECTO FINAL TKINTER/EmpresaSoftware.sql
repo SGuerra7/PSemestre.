@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 14-12-2024 a las 14:51:39
+-- Tiempo de generación: 14-12-2024 a las 15:12:47
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -42,7 +42,7 @@ INSERT INTO `Clientes` (`ClienteID`, `Nombre`, `FechaRegistro`, `Estado`) VALUES
 (1, 'Juan Pérez', '2024-12-13', 'Activo'),
 (2, 'María López', '2024-12-13', 'Activo'),
 (3, 'Carlos Gómez', '2024-12-13', 'Inactivo'),
-(8, 'Ramón Valdéz', '2024-12-14', 'Activo');
+(8, 'Ramón Valdez ', '2024-12-14', 'Activo');
 
 --
 -- Disparadores `Clientes`
@@ -117,7 +117,7 @@ INSERT INTO `Contactos` (`ContactoID`, `ClienteID`, `Email`, `Telefono`, `Direcc
 (1, 1, 'juan.perez@email.com', '555-1234', 'Av. Principal 123'),
 (2, 2, 'maria.lopez@email.com', '555-5678', 'Calle Secundaria 456'),
 (3, 3, 'carlos.gomez@email.com', '555-9012', 'Plaza Central 789'),
-(8, 8, 'soydonramon@gmail.com', '111111111', 'Ciudad de México');
+(8, 8, 'soyramon@gmail.com', '111111115', 'Ciudad de México');
 
 -- --------------------------------------------------------
 
